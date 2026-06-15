@@ -31,6 +31,125 @@
 | 人文与社会 | 理解历史、哲学、政治、文化和制度 | [humanities.md](./humanities.md) |
 | 工具箱 | 提供可直接使用的模板、清单和训练方法 | [toolkit.md](./toolkit.md) |
 
+### 模块关系图
+
+```mermaid
+graph TD
+    subgraph 基础层
+        CO["认知与学习\ncognition"]
+        SM["自我管理\nself-management"]
+        HE["健康与身心\nhealth"]
+    end
+
+    subgraph 能力层
+        EN["工程与技术\nengineering"]
+        BU["商业与产品\nbusiness"]
+        EC["经济与金融\neconomy"]
+        SO["社交与影响\nsocial"]
+        CR["创造与表达\ncreation"]
+        HU["人文与社会\nhumanities"]
+    end
+
+    subgraph 支持层
+        TK["工具箱\ntoolkit"]
+    end
+
+    CO --> EN
+    CO --> SM
+    CO --> BU
+    CO --> EC
+    CO --> SO
+    CO --> CR
+    CO --> HU
+
+    SM --> HE
+    SM --> EN
+    SM --> BU
+    SM --> CR
+
+    HE --> SM
+    HE --> SO
+
+    EN --> BU
+    EN --> EC
+    EN --> TK
+
+    BU --> EC
+    BU --> CR
+    BU --> TK
+
+    EC --> HU
+    EC --> BU
+
+    SO --> CR
+    SO --> HU
+    SO --> TK
+
+    CR --> BU
+    CR --> TK
+
+    HU --> SO
+    HU --> EC
+
+    TK -.-> CO
+    TK -.-> EN
+    TK -.-> BU
+    TK -.-> EC
+    TK -.-> SO
+    TK -.-> CR
+    TK -.-> SM
+    TK -.-> HE
+    TK -.-> HU
+
+    classDef foundation fill:#f9f,stroke:#333,stroke-width:2px
+    classDef capability fill:#bbf,stroke:#333,stroke-width:2px
+    classDef support fill:#dfd,stroke:#333,stroke-width:2px
+
+    class CO,SM,HE foundation
+    class EN,BU,EC,SO,CR,HU capability
+    class TK support
+```
+
+**图例**：箭头表示知识依赖和推荐学习顺序。基础层模块建议优先学习，能力层模块可并行推进，支持层为所有模块提供工具和模板。
+
+---
+
+## 分类索引
+
+### 按场景快速查找
+
+| 场景 | 相关模块 |
+| --- | --- |
+| **想学习一个新领域** | [认知与学习](./cognition.md)、[工程与技术](./engineering.md#领域入门地图) |
+| **想解决问题、做决策** | [工程与技术](./engineering.md)、[工具箱-问题定义卡](./toolkit.md#问题定义卡) |
+| **想做项目、建系统** | [工程与技术](./engineering.md)、[自我管理](./self-management.md) |
+| **想做产品、创业** | [商业与产品](./business.md)、[工程与技术](./engineering.md) |
+| **想提升表达、写作** | [创造与表达](./creation.md)、[社交与影响](./social.md) |
+| **想管理人脉、建立协作** | [社交与影响](./social.md)、[商业与产品](./business.md) |
+| **想理解经济、商业** | [经济与金融](./economy.md)、[商业与产品](./business.md) |
+| **想理解社会、历史** | [人文与社会](./humanities.md)、[经济与金融](./economy.md) |
+| **想管理健康、精力** | [健康与身心](./health.md)、[自我管理](./self-management.md) |
+| **想要模板、清单** | [工具箱](./toolkit.md)（所有模板） |
+
+### 按输出类型查找
+
+| 输出类型 | 相关模块 |
+| --- | --- |
+| **文章、笔记、文档** | [认知与学习](./cognition.md#学习流程)、[创造与表达](./creation.md#写作训练)、[工具箱-学习输出模板](./toolkit.md#学习输出模板) |
+| **产品、原型、MVP** | [工程与技术](./engineering.md#原型验证)、[商业与产品](./business.md#训练方法) |
+| **演讲、表达** | [创造与表达](./creation.md#表达结构)、[社交与影响](./social.md#场景清单) |
+| **决策、方案** | [工程与技术](./engineering.md#基本流程)、[经济与金融](./economy.md#个人金融原则)、[工具箱-决策记录](./toolkit.md#决策记录) |
+| **研究报告** | [人文与社会](./humanities.md#训练方法)、[经济与金融](./economy.md#企业财务入门) |
+| **个人系统、流程** | [自我管理](./self-management.md#目标系统)、[工程与技术](./engineering.md#系统视角) |
+
+### 按训练阶段查找
+
+| 阶段 | 推荐模块 |
+| --- | --- |
+| **第一阶段（0-3个月）打基础 | [认知与学习](./cognition.md)、[自我管理](./self-management.md)、[工具箱](./toolkit.md#30-天人生进化训练营) |
+| **第二阶段（3-12个月）跨域组合 | [工程与技术](./engineering.md)、[商业与产品](./business.md)、[创造与表达](./creation.md) |
+| **第三阶段（1-3年）系统创造 | [经济与金融](./economy.md)、[人文与社会](./humanities.md)、[社交与影响](./social.md) |
+
 ---
 
 ## 快速开始
